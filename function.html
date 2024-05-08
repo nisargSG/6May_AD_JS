@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        // function add(a,b){
+        //     return a+b;
+        // }
+        
+        //variable as function
+        // let add = (a,b)=>{
+        //     return a+b;
+        // }
+        let addition  = function(a,b){
+            return a+b;
+        }
+        let add = (a,b)=> a+b //fat arrow function
+        let msg = ()=> console.log("Hi msg ");
+        let ans = add(10,20)
+        document.write("Addition is "+ans);
+        msg();
+
+        let arr = [11,22,33,44,55];
+        //index/position - 0 a[0]
+        // let res = arr.forEach(function(i){
+        //     return i%2==0;
+        // })
+        let res = arr.map(function(i){
+            return i*2;
+        })
+        console.log(res);
+        //filter
+        let ans1 = arr.filter((i)=>{
+            return i==330;
+        });
+        console.log(ans1);
+        //includes
+        console.log("22 is available or not "+arr.includes(220));
+        //reduce & reduceRight
+        let finalAns = arr.reduceRight((total,i)=>{
+            console.log("----total is---- "+total);
+            return total+i;
+        })
+    </script>
+</body>
+</html>
