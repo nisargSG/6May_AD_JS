@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <input type="text" name="no" id="no"><br><br>
+    <button onclick="addNo(1)">1</button>
+    <button onclick="addNo(2)">2</button>
+    <button onclick="addNo(3)">3</button> <br><br>
+    <button onclick="addNo('+')">+</button>
+    <button onclick="addNo('-')">-</button>
+    <button onclick="result()">=</button> <br><br>
+    <script>
+        
+        let txt = '';
+        const addNo =(i)=>{
+            txt +=i; // += txt = txt+i
+            document.getElementById("no").value = txt;
+        }
+        const result = ()=>{
+            document.getElementById("no").value = eval(txt)
+            txt = '';
+        }
+        //12+22
+        //txt - 5== 4
+    </script>
+</body>
+</html>

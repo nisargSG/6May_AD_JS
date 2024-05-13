@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Example</title>
+</head>
+<body>
+    <script>
+        // let a = {} //blank/empty create object
+        // let b = new Object()
+        // let user = {}
+        // user.name = "Rinkal"
+        // user['age'] = 25
+        let user = {
+            id:101,
+            name:"test",
+            age:25
+        }
+        // console.log("User id is "+user.id);
+        // console.log("User Name is "+user['name']);
+        for(var x in user){
+            console.log(x+" is "+user[x]);
+        }
+        user.lastname = "abc"
+        for(var x in user){
+            console.log(x+" is "+user[x]);
+        }
+        console.log("----After deleting-----");
+        delete user.name;
+        for(x in user){
+            console.log(x+" is "+user[x]);
+        }
+
+        let student = {
+            rollno:1,
+            name:"Abc",
+            lastname:"test",
+            display: function(){
+                return this.name+" "+this.lastname
+            }
+            
+        }
+        console.log("display fucntion calling...");
+        console.log("Your fullname is  --- "+student.display());
+    </script>
+</body>
+</html>
