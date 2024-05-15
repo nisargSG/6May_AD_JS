@@ -30,6 +30,16 @@
         console.log('After delete 2nd position element');
         console.log(arr);
         console.log(arr[2]); //undefined
+
+        // const str_arr = ["fgf","abc","test","pqr"]
+
+        // console.log("Asc order -- "+str_arr.sort());
+        // console.log("Reverse order -- "+str_arr.reverse());
+        const new_arr = [34,45,120,23,670,78]
+        console.log("Asc order -- "+new_arr.sort((a,b)=>{
+            return b-a; //34-45 = 120-23 =
+        }));
+        // console.log("Reverse order -- "+new_arr.reverse());
     </script>
 </body>
 </html>

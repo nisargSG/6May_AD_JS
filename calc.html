@@ -12,9 +12,10 @@
     <button onclick="addNo(3)">3</button> <br><br>
     <button onclick="addNo('+')">+</button>
     <button onclick="addNo('-')">-</button>
-    <button onclick="result()">=</button> <br><br>
+    <button onclick="result()">=</button> 
+    <button onclick="back()">Back</button>
+    <br><br>
     <script>
-        
         let txt = '';
         const addNo =(i)=>{
             txt +=i; // += txt = txt+i
@@ -23,6 +24,10 @@
         const result = ()=>{
             document.getElementById("no").value = eval(txt)
             txt = '';
+        }
+        const back = ()=>{
+            txt = txt.slice(0,-1) //12+22
+            document.getElementById("no").value = txt
         }
         //12+22
         //txt - 5== 4

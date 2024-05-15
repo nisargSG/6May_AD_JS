@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        <p id="txt">Hello</p>
+        <p id="txt2">My text</p>
+    </div>
+    <script>
+        let a = document.createElement("p")
+        let b = document.createTextNode("My CUstom tag")
+        a.appendChild(b) //<p> My cut</p>
+        let div = document.getElementById("demo")
+        let t = document.getElementById('txt2')
+        // div.insertBefore(a,t)
+        div.appendChild(a)
+    </script>
+</body>
+</html>
