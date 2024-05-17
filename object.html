@@ -42,6 +42,12 @@
             display: function(){
                 return this.name+" "+this.lastname
             },
+            get getRollNo(){
+                return this.rollno
+            },
+            set setName(name){
+                this.name = name
+            },
             qualification:["10th","12th","BCA","MCA"]
             
         }
@@ -50,6 +56,10 @@
         })
         console.log("display fucntion calling...");
         console.log("Your fullname is  --- "+student.display());
+        console.log("Your Rollno is  --- "+student.getRollNo);
+        student.setName = "Updated Name"
+        console.log("Your fullname is  --- "+student.display());
+
     </script>
 </body>
 </html>

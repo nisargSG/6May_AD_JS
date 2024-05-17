@@ -13,6 +13,7 @@
     <button onclick="addNo('+')">+</button>
     <button onclick="addNo('-')">-</button>
     <button onclick="result()">=</button> <br><br>
+    <button onclick="back()">Back</button>
     <script>
         
         let txt = '';
@@ -23,6 +24,11 @@
         const result = ()=>{
             document.getElementById("no").value = eval(txt)
             txt = '';
+        }
+        const back=()=>{
+            let len = txt.length;
+            txt = txt.slice(0,-1)
+            document.getElementById("no").value = txt
         }
         //12+22
         //txt - 5== 4
