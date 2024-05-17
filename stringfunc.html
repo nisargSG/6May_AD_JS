@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>String Function</h3>
+    <script>
+        let str = "Hello World hsdjhfg shjdfgsdhj sdfhgshjdf sdfhsgf Hello"
+        document.write('String length is '+str.length)
+        document.write('<br>String Uppercase is '+str.toUpperCase())
+        document.write('<br>String Lowercase is '+str.toLowerCase())
+
+        let str2 = "Test sdfg sjhdgfsd f sertw abc pqr abc"
+        document.write('<br>Merge string is '+str+" "+str2)
+
+        let str3 = str.concat("$$$",str2,"@@@")
+        document.write('<br>Merge string is '+str3)
+        let new_str = str.replace("HEllo","Test")
+        document.write('<br>After replace string is '+new_str)
+         new_str = str.replace(/HEllo/gi,"Test")
+        document.write('<br>After replace string is '+new_str)
+        new_str= str2.replaceAll(/Abc/gi,"UpdatedText")
+        document.write('<br>After replaceAll string is '+new_str)
+        let text = "            hdsagfshdjf hjgsd  test             "
+        document.write('<br>-----------------<br>Text is '+text.length)
+        let t1 = text.trim()
+        document.write('<br>-----------------<br>Text is '+t1.length)
+        t1 = text.trimStart()
+        document.write('<br>-----------------<br>Text is '+t1.length)
+        t1 = text.trimEnd()
+        document.write('<br>-----------------<br>Text is '+t1.length)
+
+        let ab = "hello"
+        let st = ab.padStart(8,"@$")
+        document.write('<br>String is '+st)
+        st = ab.padEnd(8,"@$#")
+        document.write('<br>String is '+st)
+
+       newst = ab.charAt(0)
+       document.write('3rd position is '+newst)
+
+       newst = ab.charCodeAt(0)
+       document.write('3rd ASCII value position is '+newst)
+    </script>
+</body>
+</html>
