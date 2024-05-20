@@ -8,7 +8,42 @@
 <body>
     <script>
         let d1 = new Date()
-        document.write('Date is '+d1)
+        document.write('Date is --- '+d1)
+        let d2 = d1.getDate();
+        document.write('<br>Date is '+d2)
+        
+        d2 = d1.getDay();
+        document.write('<br>Day is '+d2)
+
+        d2 = d1.getMonth() + 1;
+        document.write('<br>Month is '+d2)
+
+        d2 = d1.getHours();
+        document.write('<br>Hours is '+d2)
+
+        d2 = d1.getMinutes();
+        document.write('<br>Minutes is '+d2)
+
+        d2 = d1.getSeconds();
+        document.write('<br>Seconds is '+d2)
+        // setTimeout(()=>{
+        //     alert("Hii")
+        // },5000)
+
+        // setInterval(()=>{
+        //     d2 = d1.getSeconds();
+        //     document.write('<br>Seconds is '+d2)
+        // },1000)
+        let a = prompt("Enter a:")
+        let b = prompt("Enter b:")
+        let c = parseInt(a)+parseInt(b);
+        document.write('Addition is '+c)
+        const pi = 3.14;
+        let r = prompt("Enter radious:")
+        r = Math.pow(parseFloat(r),2)
+        document.write('Area of circle is '+(pi*r))
+
+        
     </script>
 </body>
 </html>
