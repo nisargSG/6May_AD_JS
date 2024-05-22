@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and Object</title>
+</head>
+<body>
+    <script>
+        class emp{
+            constructor(empid,name,designation,salary){
+                this.empid = empid
+                this.name = name
+            }
+            dispEmp(){
+                return this.empid+'---'+this.name
+            }
+        }
+        let objEmp = new emp(101,"testabc","","")
+        document.write("Emp id & name is " + objEmp.dispEmp());
+
+        class student{
+            //default constructor
+            /* constructor(){
+                console.log("Constructor calling...")
+            } */
+            //parameterized 
+            constructor(a,b){
+                this.no1 = a
+                this.no2 = b
+            }
+            display(){
+                console.log("Addition is "+(this.no1 +  this.no2))
+                console.log("display function calling...")
+            }
+        }
+        const obj = new student(10,20);
+        obj.display();
+
+        
+    </script>
+</body>
+</html>

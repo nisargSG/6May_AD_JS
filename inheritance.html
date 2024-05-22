@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class abc {
+            constructor(){
+                console.log("Abc class constructor called..")
+            }
+            disp(){
+                console.log("Abc class disp func called..")
+            }
+        }
+        class test extends abc{
+            constructor(){
+                super()
+                console.log("test class constructor called..")
+            }
+            disp(){
+                super.disp()
+                console.log("test class disp func called..")
+            }
+        }
+        const obj = new test();
+        obj.disp();
+    </script>
+</body>
+</html>
