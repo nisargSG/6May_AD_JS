@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Polymorphism Example</h3>
+    <script>
+        const pi = 3.14
+        class abc{
+            disp(){
+                document.write("<br>"+'Abc displayfunction called..')
+            }
+            area(r){
+                document.write('<br>'+'Area of circle is '+(pi*r**2))               
+            }
+        }
+        class xyz extends abc{
+            disp(){
+                document.write("<br>"+"xyz displayfunction called."+"<br>")
+            }
+            area(l,b,h){
+                super.area(l);
+                document.write("<br>"+'Area of rectangle is '+(l*b*h))               
+            }
+        }
+        let obj = new xyz();
+        obj.disp()
+        obj.area(5,6,3)
+        let obj1 = new abc();
+        obj1.disp()
+
+        let a=25;
+        let b=0;
+        try{
+            //error create
+            if(b>0){
+                document.write("<br>"+"Division is "+(a/b))
+            } else {
+                throw "It is not divisible by zero"
+            }
+        }
+        catch(e){
+            //solution
+            document.write("<br>"+"Error --- "+e)
+        }
+        finally{
+            document.write("<br>"+" Addition is "+(a+b))
+        }
+        
+    </script>
+</body>
+</html>

@@ -25,19 +25,28 @@
                 console.log("Constructor calling...")
             } */
             //parameterized 
+            static name = "stativtesting"
             constructor(a,b){
                 this.no1 = a
                 this.no2 = b
+                
             }
             display(){
                 console.log("Addition is "+(this.no1 +  this.no2))
                 console.log("display function calling...")
             }
+            static getTwoNo(){
+                return student.name
+            }
         }
-        const obj = new student(10,20);
+        student.prototype.dispNo = function(){
+            //return this.no1
+            console.log("No1 is "+this.no1)
+        }
+        const obj = new student(10,20,"hello");
         obj.display();
-
-        
+        obj.dispNo()
+        document.write("Name is  "+student.getTwoNo())
     </script>
 </body>
 </html>
