@@ -6,19 +6,23 @@
     <title>OOPs</title>
 </head>
 <body>
+    <button onclick="checkUrl()">Click</button>
     <script>
         let arr = [10,20,30,40]
         let arr2 = [11,22,33,44]
 
         let merge_arr = [...arr,...arr2] //merging - spread operator
-        // document.write(merge_arr)
-
+         document.write(merge_arr)
+debugger;
         const str = ["test","acb","pqr","xyz"]
         const [a,b,,d] = str
-        // document.write(a)
+         document.write(a)
 
         const [a1,a2,...a3] = str
         document.write(a3)
+        const checkUrl = ()=>{
+            location.href = 'https://www.geeksforgeeks.org/javascript-promise/'
+        }
 /*
 [
     {

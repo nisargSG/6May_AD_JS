@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Promises -- 10th june party
+        //Resolve
+        //Reject
+        const a1 = new Promise((a,b)=>{
+            //a("PARTY COmpleted"); //resolve
+            b("Party pending... I'll give next year");//reject
+        }).then((msg)=>{
+            console.log(msg)
+        })
+        .catch((err)=>{
+            console.log("Error --- "+err)
+        }) 
+
+    </script>
+</body>
+</html>
