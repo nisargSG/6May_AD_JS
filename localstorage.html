@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Localstorage Example</h3>
+    <div id="demo"></div>
+    <button onclick="setData()">Set Data</button>
+    <button onclick="getData()">Get Data</button>
+    <button onclick="deleteData()">Delete Data</button>
+    <script>
+        const setData = ()=>{
+            let arr = [10,20,30,40]
+            localStorage.setItem("Username","Abc")
+            localStorage.setItem("age",22)
+            localStorage.setItem("array",JSON.stringify(arr))
+        }
+        const getData = ()=>{
+            let a = JSON.parse(localStorage.getItem("array"))
+            // document.getElementById('demo').innerHTML = "My Name is "+a
+            document.getElementById('demo').innerHTML = "Array is "+a[0]
+        }
+        const deleteData = ()=>{
+            // localStorage.removeItem("Username")
+            localStorage.clear()
+        }
+        
+        
+    </script>
+</body>
+</html>

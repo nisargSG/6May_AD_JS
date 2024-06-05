@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="demo"></div>
+    <button onclick="setData()">Set Data</button>
+    <button onclick="getData()">Get Data</button>
+    <button onclick="deleteData()">Delete Data</button>
+    <script>
+        let arr = [
+            {
+                "id":101,
+                "name":"TEst",
+                "age":25
+            },
+            {
+                "id":102,
+                "name":"Abc",
+                "age":20
+            },
+            {
+                "id":103,
+                "name":"Pqr",
+                "age":28
+            }
+        ]
+
+        const setData = ()=>{
+            localStorage.setItem("userInfo",JSON.stringify(arr))
+        }
+        const getData = ()=>{
+            let user  = JSON.parse(localStorage.getItem("userInfo"))
+            let tr = '';
+            user.map((i)=>{
+                tr += `
+                Name is  : ${i.name} <br>
+                `;
+            })
+            document.getElementById('demo').innerHTML = tr;
+        }
+    </script>
+</body>
+</html>
