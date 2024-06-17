@@ -10,8 +10,9 @@ let tr = '';
                 <tr>
                 <td>${i.id}</td>
                 <td>${i.name}</td>
-                <td><button onclick='deleteData(${i.id})'>Delete</button>
-                <button onclick='editData(${i.id})'>Edit</button></td>
+                <td><button onclick='editData(${i.id})'>Edit</button>
+                <button onclick='deleteData(${i.id})'>Delete</button>
+                </td>
                 </tr>
             `
         })
@@ -22,6 +23,7 @@ let tr = '';
 dispCat();
 
 const saveData = ()=>{
+    
     let getData = JSON.parse(localStorage.getItem('catInfo'))
     let cname = document.catfrm.catname.value;
     let len = (getData !== null)?(getData.length+1):1;
